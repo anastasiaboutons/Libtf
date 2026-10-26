@@ -1,16 +1,12 @@
-
-#include <stdio.h>
 size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
-
-	
 	size_t	i;
-	i = 0;
 	size_t	j;
-        j = 0; 
-	size_t len;
-	len = 0;
+	size_t	len;
 
+	i = 0;
+	j = 0;
+	len = 0;
 	while (dst[i] != '\0')
 	{
 		i++;
@@ -21,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 		while ((src[j] != '\0') && (i < dsize - 1))
 		{
 			dst[i] = src[j];
-			i++; 
+			i++;
 			j++;
 		}
 	}
@@ -34,12 +30,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	else
 		len = len + j;
 	return (len);
-}
-
-int	main()
-{
-	char src[] = "anast";
-	char dest[] = "hello";
-	printf("%ld", ft_strlcat(dest, src, 2));
-
 }

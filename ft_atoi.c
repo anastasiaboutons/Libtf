@@ -1,17 +1,16 @@
 #include <stdlib.h>
-#include <stdio.h>
+
 int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	i = 0;
 	int	negatif;
-	negatif = 1;
 	int	n;
-	n = 0;
-
 	char	*nnptr;
-	nnptr = (char *)nptr;
 
+	i = 0;
+	negatif = 1;
+	n = 0;
+	nnptr = (char *)nptr;
 	if (nnptr[i] == '\0')
 		return (0);
 	while (((nnptr[i] == ' ') || ((nnptr[i] >= 9) && (nnptr[i] <= 13))))
@@ -32,11 +31,4 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (n * negatif);
-}
-
-int	main()
-{
-	char a[] = "+-az265f";
-	printf("%d", ft_atoi(a));
-	printf("%d", atoi(a));
 }

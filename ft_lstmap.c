@@ -1,21 +1,14 @@
-typedef struct s_list
-{
-	void *content;
-	struct s_list *next;
-} t_list;
-
 #include <stdlib.h>
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *lst_n; 
+	t_list	*lst_n;
 	t_list	*a;
 	t_list	*b;
 
 	(void)del;
-
 	lst_n = NULL;
 	a = NULL;
-
 	while (lst != NULL)
 	{
 		b = a;
@@ -30,5 +23,5 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			b->next = a;
 		lst = lst->next;
 	}
-	return (lst_n)
+	return (lst_n);
 }
