@@ -14,8 +14,8 @@ Libft is the first project of the 42 common core. The goal is to write my own C 
 
 The repository contains:
 
-* `ft\_\*.c`: one source file per function (43 functions).
-* `libft.h`: the header, with the prototypes of all the functions and the `t\_list` type.
+* `ft_*.c`: one source file per function (43 functions).
+* `libft.h`: the header, with the prototypes of all the functions and the `t_list` type.
 * `Makefile`: compiles all the source files and builds the static library `libft.a`.
 
 
@@ -60,7 +60,7 @@ AI (Claude) was used:
 
 * to write this README;
 * to test the edge cases of my functions: comparing them with the real libc functions on many inputs, and checking for memory errors and leaks;
-* to explain concepts (pointers, memory, `size\_t`, linked lists, function pointers) and to  understand compiler errors;
+* to explain concepts (pointers, memory, `size_t`, linked lists, function pointers) and to  understand compiler errors;
 
 ## 
 
@@ -72,9 +72,9 @@ AI (Claude) was used:
 
 
 
-#### ft\_isalpha
+#### ft_isalpha
 
-`int ft\_isalpha(int c);`
+`int ft_isalpha(int c);`
 Checks if `c` is a letter (`a`-`z` or `A`-`Z`).
 
 * `c`: the character to check.
@@ -82,9 +82,9 @@ Checks if `c` is a letter (`a`-`z` or `A`-`Z`).
 
 
 
-#### ft\_isdigit
+#### ft_isdigit
 
-`int ft\_isdigit(int c);`
+`int ft_isdigit(int c);`
 Checks if `c` is a digit (`0`-`9`).
 
 * `c`: the character to check.
@@ -92,9 +92,9 @@ Checks if `c` is a digit (`0`-`9`).
 
 
 
-#### ft\_isalnum
+#### ft_isalnum
 
-`int ft\_isalnum(int c);`
+`int ft_isalnum(int c);`
 Checks if `c` is a letter or a digit.
 
 * `c`: the character to check.
@@ -102,9 +102,9 @@ Checks if `c` is a letter or a digit.
 
 
 
-#### ft\_isascii
+#### ft_isascii
 
-`int ft\_isascii(int c);`
+`int ft_isascii(int c);`
 Checks if `c` is an ASCII value (`0` to `127`).
 
 * `c`: the value to check.
@@ -112,9 +112,9 @@ Checks if `c` is an ASCII value (`0` to `127`).
 
 
 
-#### ft\_isprint
+#### ft_isprint
 
-`int ft\_isprint(int c);`
+`int ft_isprint(int c);`
 Checks if `c` is a printable character, space included (`32` to `126`).
 
 * `c`: the character to check.
@@ -122,19 +122,19 @@ Checks if `c` is a printable character, space included (`32` to `126`).
 
 
 
-#### ft\_strlen
+#### ft_strlen
 
-`size\_t ft\_strlen(const char \*s);`
+`size_t ft_strlen(const char *s);`
 Counts the characters of a string.
 
 * `s`: the string.
-* Returns the number of characters, without the final `'\\0'`.
+* Returns the number of characters, without the final `'\0'`.
 
 
 
-#### ft\_memset
+#### ft_memset
 
-`void \*ft\_memset(void \*s, int c, size\_t n);`
+`void *ft_memset(void *s, int c, size_t n);`
 Fills the first `n` bytes of the memory area `s` with the byte `c`.
 
 * `s`: the memory area to fill.
@@ -144,9 +144,9 @@ Fills the first `n` bytes of the memory area `s` with the byte `c`.
 
 
 
-#### ft\_bzero
+#### ft_bzero
 
-`void ft\_bzero(void \*s, size\_t n);`
+`void ft_bzero(void *s, size_t n);`
 Sets the first `n` bytes of the memory area `s` to zero.
 
 * `s`: the memory area.
@@ -155,9 +155,9 @@ Sets the first `n` bytes of the memory area `s` to zero.
 
 
 
-#### ft\_memcpy
+#### ft_memcpy
 
-`void \*ft\_memcpy(void \*dest, const void \*src, size\_t n);`
+`void *ft_memcpy(void *dest, const void *src, size_t n);`
 Copies `n` bytes from `src` to `dest`. The two areas must not overlap.
 
 * `dest`: where to copy.
@@ -167,9 +167,9 @@ Copies `n` bytes from `src` to `dest`. The two areas must not overlap.
 
 
 
-#### ft\_memmove
+#### ft_memmove
 
-`void \*ft\_memmove(void \*dest, const void \*src, size\_t n);`
+`void *ft_memmove(void *dest, const void *src, size_t n);`
 Copies `n` bytes from `src` to `dest`, even if the two areas overlap.
 
 * `dest`: where to copy.
@@ -179,10 +179,10 @@ Copies `n` bytes from `src` to `dest`, even if the two areas overlap.
 
 
 
-#### ft\_strlcpy
+#### ft_strlcpy
 
-`size\_t ft\_strlcpy(char \*dst, const char \*src, size\_t size);`
-Copies the string `src` into `dst`, a buffer of `size` bytes. It copies at most `size - 1` characters and always ends `dst` with `'\\0'` (if `size` is not `0`).
+`size_t ft_strlcpy(char *dst, const char *src, size_t size);`
+Copies the string `src` into `dst`, a buffer of `size` bytes. It copies at most `size - 1` characters and always ends `dst` with `'\0'` (if `size` is not `0`).
 
 * `dst`: the destination buffer.
 * `src`: the string to copy.
@@ -191,10 +191,10 @@ Copies the string `src` into `dst`, a buffer of `size` bytes. It copies at most 
 
 
 
-#### ft\_strlcat
+#### ft_strlcat
 
-`size\_t ft\_strlcat(char \*dst, const char \*src, size\_t size);`
-Adds the string `src` at the end of `dst`, a buffer of `size` bytes, without overflowing it. The result always ends with `'\\0'`.
+`size_t ft_strlcat(char *dst, const char *src, size_t size);`
+Adds the string `src` at the end of `dst`, a buffer of `size` bytes, without overflowing it. The result always ends with `'\0'`.
 
 * `dst`: the string to complete.
 * `src`: the string to add.
@@ -203,9 +203,9 @@ Adds the string `src` at the end of `dst`, a buffer of `size` bytes, without ove
 
 
 
-#### ft\_toupper
+#### ft_toupper
 
-`int ft\_toupper(int c);`
+`int ft_toupper(int c);`
 Converts a lowercase letter to uppercase.
 
 * `c`: the character to convert.
@@ -213,9 +213,9 @@ Converts a lowercase letter to uppercase.
 
 
 
-#### ft\_tolower
+#### ft_tolower
 
-`int ft\_tolower(int c);`
+`int ft_tolower(int c);`
 Converts an uppercase letter to lowercase.
 
 * `c`: the character to convert.
@@ -223,10 +223,10 @@ Converts an uppercase letter to lowercase.
 
 
 
-#### ft\_strchr
+#### ft_strchr
 
-`char \*ft\_strchr(const char \*s, int c);`
-Finds the first occurrence of the character `c` in the string `s`. The final `'\\0'` can also be found.
+`char *ft_strchr(const char *s, int c);`
+Finds the first occurrence of the character `c` in the string `s`. The final `'\0'` can also be found.
 
 * `s`: the string to search.
 * `c`: the character to find.
@@ -234,9 +234,9 @@ Finds the first occurrence of the character `c` in the string `s`. The final `'\
 
 
 
-#### ft\_strrchr
+#### ft_strrchr
 
-`char \*ft\_strrchr(const char \*s, int c);`
+`char *ft_strrchr(const char *s, int c);`
 Finds the last occurrence of the character `c` in the string `s`.
 
 * `s`: the string to search.
@@ -245,9 +245,9 @@ Finds the last occurrence of the character `c` in the string `s`.
 
 
 
-#### ft\_strncmp
+#### ft_strncmp
 
-`int ft\_strncmp(const char \*s1, const char \*s2, size\_t n);`
+`int ft_strncmp(const char *s1, const char *s2, size_t n);`
 Compares at most the first `n` characters of two strings.
 
 * `s1`, `s2`: the strings to compare.
@@ -256,9 +256,9 @@ Compares at most the first `n` characters of two strings.
 
 
 
-#### ft\_memchr
+#### ft_memchr
 
-`void \*ft\_memchr(const void \*s, int c, size\_t n);`
+`void *ft_memchr(const void *s, int c, size_t n);`
 Finds the first byte equal to `c` in the first `n` bytes of `s`.
 
 * `s`: the memory area to search.
@@ -268,9 +268,9 @@ Finds the first byte equal to `c` in the first `n` bytes of `s`.
 
 
 
-#### ft\_memcmp
+#### ft_memcmp
 
-`int ft\_memcmp(const void \*s1, const void \*s2, size\_t n);`
+`int ft_memcmp(const void *s1, const void *s2, size_t n);`
 Compares the first `n` bytes of two memory areas.
 
 * `s1`, `s2`: the memory areas to compare.
@@ -279,9 +279,9 @@ Compares the first `n` bytes of two memory areas.
 
 
 
-#### ft\_strnstr
+#### ft_strnstr
 
-`char \*ft\_strnstr(const char \*big, const char \*little, size\_t len);`
+`char *ft_strnstr(const char *big, const char *little, size_t len);`
 Finds the first occurrence of the string `little` in the string `big`, searching at most `len` characters.
 
 * `big`: the string to search.
@@ -291,9 +291,9 @@ Finds the first occurrence of the string `little` in the string `big`, searching
 
 
 
-#### ft\_atoi
+#### ft_atoi
 
-`int ft\_atoi(const char \*nptr);`
+`int ft_atoi(const char *nptr);`
 Converts a string to an `int`. It skips the spaces at the beginning, reads one optional `+` or `-`, then reads the digits.
 
 * `nptr`: the string to convert.
@@ -301,9 +301,9 @@ Converts a string to an `int`. It skips the spaces at the beginning, reads one o
 
 
 
-#### ft\_calloc
+#### ft_calloc
 
-`void \*ft\_calloc(size\_t nmemb, size\_t size);`
+`void *ft_calloc(size_t nmemb, size_t size);`
 Allocates memory for `nmemb` elements of `size` bytes and sets all the bytes to zero.
 
 * `nmemb`: the number of elements.
@@ -312,9 +312,9 @@ Allocates memory for `nmemb` elements of `size` bytes and sets all the bytes to 
 
 
 
-#### ft\_strdup
+#### ft_strdup
 
-`char \*ft\_strdup(const char \*s);`
+`char *ft_strdup(const char *s);`
 Creates a new copy of the string `s`, using `malloc`.
 
 * `s`: the string to copy.
@@ -326,9 +326,9 @@ Creates a new copy of the string `s`, using `malloc`.
 
 
 
-#### ft\_substr
+#### ft_substr
 
-`char \*ft\_substr(char const \*s, unsigned int start, size\_t len);`
+`char *ft_substr(char const *s, unsigned int start, size_t len);`
 Creates a new string from a part of `s`, using `malloc`.
 
 * `s`: the original string.
@@ -338,9 +338,9 @@ Creates a new string from a part of `s`, using `malloc`.
 
 
 
-#### ft\_strjoin
+#### ft_strjoin
 
-`char \*ft\_strjoin(char const \*s1, char const \*s2);`
+`char *ft_strjoin(char const *s1, char const *s2);`
 Creates a new string made of `s1` followed by `s2`, using `malloc`.
 
 * `s1`: the first string.
@@ -349,9 +349,9 @@ Creates a new string made of `s1` followed by `s2`, using `malloc`.
 
 
 
-#### ft\_strtrim
+#### ft_strtrim
 
-`char \*ft\_strtrim(char const \*s1, char const \*set);`
+`char *ft_strtrim(char const *s1, char const *set);`
 Creates a copy of `s1` without the characters of `set` at the beginning and at the end, using `malloc`.
 
 * `s1`: the string to trim.
@@ -360,9 +360,9 @@ Creates a copy of `s1` without the characters of `set` at the beginning and at t
 
 
 
-#### ft\_split
+#### ft_split
 
-`char \*\*ft\_split(char const \*s, char c);`
+`char **ft_split(char const *s, char c);`
 Splits the string `s` into words, using the character `c` as a separator. The words and the array are created with `malloc`, and the array ends with `NULL`.
 
 * `s`: the string to split.
@@ -371,9 +371,9 @@ Splits the string `s` into words, using the character `c` as a separator. The wo
 
 
 
-#### ft\_itoa
+#### ft_itoa
 
-`char \*ft\_itoa(int n);`
+`char *ft_itoa(int n);`
 Converts an `int` to a string, using `malloc`. Negative numbers are handled.
 
 * `n`: the number to convert.
@@ -381,9 +381,9 @@ Converts an `int` to a string, using `malloc`. Negative numbers are handled.
 
 
 
-#### ft\_strmapi
+#### ft_strmapi
 
-`char \*ft\_strmapi(char const \*s, char (\*f)(unsigned int, char));`
+`char *ft_strmapi(char const *s, char (*f)(unsigned int, char));`
 Creates a new string where each character is the result of `f` applied to the character of `s` at the same index, using `malloc`.
 
 * `s`: the string to go through.
@@ -392,9 +392,9 @@ Creates a new string where each character is the result of `f` applied to the ch
 
 
 
-#### ft\_striteri
+#### ft_striteri
 
-`void ft\_striteri(char \*s, void (\*f)(unsigned int, char \*));`
+`void ft_striteri(char *s, void (*f)(unsigned int, char *));`
 Applies `f` to each character of `s`. Each character is passed by address, so `f` can modify it directly in `s`.
 
 * `s`: the string to go through.
@@ -403,9 +403,9 @@ Applies `f` to each character of `s`. Each character is passed by address, so `f
 
 
 
-#### ft\_putchar\_fd
+#### ft_putchar_fd
 
-`void ft\_putchar\_fd(char c, int fd);`
+`void ft_putchar_fd(char c, int fd);`
 Writes the character `c` on the file descriptor `fd`.
 
 * `c`: the character to write.
@@ -414,9 +414,9 @@ Writes the character `c` on the file descriptor `fd`.
 
 
 
-#### ft\_putstr\_fd
+#### ft_putstr_fd
 
-`void ft\_putstr\_fd(char \*s, int fd);`
+`void ft_putstr_fd(char *s, int fd);`
 Writes the string `s` on the file descriptor `fd`.
 
 * `s`: the string to write.
@@ -425,9 +425,9 @@ Writes the string `s` on the file descriptor `fd`.
 
 
 
-#### ft\_putendl\_fd
+#### ft_putendl_fd
 
-`void ft\_putendl\_fd(char \*s, int fd);`
+`void ft_putendl_fd(char *s, int fd);`
 Writes the string `s` followed by a newline on the file descriptor `fd`.
 
 * `s`: the string to write.
@@ -436,9 +436,9 @@ Writes the string `s` followed by a newline on the file descriptor `fd`.
 
 
 
-#### ft\_putnbr\_fd
+#### ft_putnbr_fd
 
-`void ft\_putnbr\_fd(int n, int fd);`
+`void ft_putnbr_fd(int n, int fd);`
 Writes the number `n` on the file descriptor `fd`.
 
 * `n`: the number to write.
@@ -451,14 +451,14 @@ Writes the number `n` on the file descriptor `fd`.
 
 
 
-A list is made of nodes of type `t\_list`, defined in `libft.h`:
+A list is made of nodes of type `t_list`, defined in `libft.h`:
 
 ```c
-typedef struct s\_list
+typedef struct s_list
 {
-	void			\*content;
-	struct s\_list	\*next;
-}	t\_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 ```
 
 * `content`: the address of the data stored in the node.
@@ -466,9 +466,9 @@ typedef struct s\_list
 
 
 
-#### ft\_lstnew
+#### ft_lstnew
 
-`t\_list \*ft\_lstnew(void \*content);`
+`t_list *ft_lstnew(void *content);`
 Creates a new node with `malloc`. Its `next` is set to `NULL`.
 
 * `content`: the content to store in the node.
@@ -476,9 +476,9 @@ Creates a new node with `malloc`. Its `next` is set to `NULL`.
 
 
 
-#### ft\_lstadd\_front
+#### ft_lstadd_front
 
-`void ft\_lstadd\_front(t\_list \*\*lst, t\_list \*new);`
+`void ft_lstadd_front(t_list **lst, t_list *new);`
 Adds the node `new` at the beginning of the list.
 
 * `lst`: the address of the pointer to the first node.
@@ -487,9 +487,9 @@ Adds the node `new` at the beginning of the list.
 
 
 
-#### ft\_lstsize
+#### ft_lstsize
 
-`unsigned int ft\_lstsize(t\_list \*lst);`
+`unsigned int ft_lstsize(t_list *lst);`
 Counts the nodes of the list.
 
 * `lst`: the first node of the list.
@@ -497,9 +497,9 @@ Counts the nodes of the list.
 
 
 
-#### ft\_lstlast
+#### ft_lstlast
 
-`t\_list \*ft\_lstlast(t\_list \*lst);`
+`t_list *ft_lstlast(t_list *lst);`
 Finds the last node of the list.
 
 * `lst`: the first node of the list.
@@ -507,9 +507,9 @@ Finds the last node of the list.
 
 
 
-#### ft\_lstadd\_back
+#### ft_lstadd_back
 
-`void ft\_lstadd\_back(t\_list \*\*lst, t\_list \*new);`
+`void ft_lstadd_back(t_list **lst, t_list *new);`
 Adds the node `new` at the end of the list.
 
 * `lst`: the address of the pointer to the first node.
@@ -518,9 +518,9 @@ Adds the node `new` at the end of the list.
 
 
 
-#### ft\_lstdelone
+#### ft_lstdelone
 
-`void ft\_lstdelone(t\_list \*lst, void (\*del)(void \*));`
+`void ft_lstdelone(t_list *lst, void (*del)(void *));`
 Frees the content of one node with `del`, then frees the node itself. The next node is not freed.
 
 * `lst`: the node to free.
@@ -529,9 +529,9 @@ Frees the content of one node with `del`, then frees the node itself. The next n
 
 
 
-#### ft\_lstclear
+#### ft_lstclear
 
-`void ft\_lstclear(t\_list \*\*lst, void (\*del)(void \*));`
+`void ft_lstclear(t_list **lst, void (*del)(void *));`
 Deletes and frees a node and all the nodes after it, then sets the pointer to the list to `NULL`.
 
 * `lst`: the address of the pointer to the first node.
@@ -540,9 +540,9 @@ Deletes and frees a node and all the nodes after it, then sets the pointer to th
 
 
 
-#### ft\_lstiter
+#### ft_lstiter
 
-`void ft\_lstiter(t\_list \*lst, void (\*f)(void \*));`
+`void ft_lstiter(t_list *lst, void (*f)(void *));`
 Applies the function `f` to the content of each node.
 
 * `lst`: the first node of the list.
@@ -551,9 +551,9 @@ Applies the function `f` to the content of each node.
 
 
 
-#### ft\_lstmap
+#### ft_lstmap
 
-`t\_list \*ft\_lstmap(t\_list \*lst, void \*(\*f)(void \*), void (\*del)(void \*));`
+`t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));`
 Creates a new list where each content is the result of `f` applied to the content of the original list. The original list is not modified.
 
 * `lst`: the first node of the original list.
