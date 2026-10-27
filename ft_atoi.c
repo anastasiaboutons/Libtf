@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anrassou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 19:15:21 by anrassou          #+#    #+#             */
+/*   Updated: 2026/10/26 19:15:28 by anrassou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int	negatif;
-	int	n;
+	int		negatif;
+	int		n;
 	char	*nnptr;
 
 	i = 0;
@@ -18,12 +30,8 @@ int	ft_atoi(const char *nptr)
 	if ((nnptr[i] == '+') || (nnptr[i] == '-'))
 	{
 		if (nnptr[i] == '-')
-		{
 			negatif = -1;
-			i++;
-		}
-		else
-			i++;
+		i++;
 	}
 	while ((nnptr[i] >= '0') && (nnptr[i] <= '9'))
 	{
