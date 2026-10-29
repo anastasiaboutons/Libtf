@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t n, size_t size)
 {
@@ -21,7 +20,7 @@ void	*ft_calloc(size_t n, size_t size)
 	{
 		return (malloc(0));
 	}
-	if (size > 18446744073709551615UL / n)
+	if (n * size / n != size)
 		return (NULL);
 	nsize = malloc(n * size);
 	if (nsize == NULL)
